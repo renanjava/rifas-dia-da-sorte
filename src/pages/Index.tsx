@@ -17,11 +17,11 @@ const Index = () => {
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center">
             <span className="text-primary-foreground font-bold text-lg">
-              RC
+              DDS
             </span>
           </div>
           <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-            Rifas Charamba
+            Dia Da Sorte
           </h1>
         </div>
         <ThemeToggle />
@@ -150,12 +150,12 @@ const Index = () => {
                     Siga nosso Instagram
                   </h4>
                   <a
-                    href="https://instagram.com/rifas_charamba"
+                    href="https://instagram.com/dia_da_sorte.rifas"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-lg font-semibold text-primary hover:text-primary-glow transition-colors inline-flex items-center gap-2"
                   >
-                    @rifas_charamba
+                    @dia_da_sorte.rifas
                   </a>
                   <p className="text-sm text-muted-foreground mt-2">
                     Acompanhe os sorteios, ganhadores e novidades!
@@ -169,7 +169,7 @@ const Index = () => {
 
       <footer className="container mx-auto px-4 py-8 mt-16 border-t border-border">
         <p className="text-center text-sm text-muted-foreground">
-          © 2025 Rifas Charamba - Todos os direitos reservados
+          © 2025 Dia Da Sorte - Todos os direitos reservados
           <br></br>
           Desenvolvido por Renan Geraldini Leão.
         </p>
