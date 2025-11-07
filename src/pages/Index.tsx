@@ -77,14 +77,6 @@ const Index = () => {
                           R$ 5,00
                         </span>
                       </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-muted-foreground">
-                          Taxa de Pagamento:
-                        </span>
-                        <span className="text-lg font-semibold text-foreground">
-                          R$ 0,80
-                        </span>
-                      </div>
                     </div>
 
                     <Button
