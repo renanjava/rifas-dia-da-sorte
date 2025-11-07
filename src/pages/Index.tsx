@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Instagram, Shield, Calendar } from "lucide-react";
 import productHero from "@/assets/product-hero.jpg";
+import FAQSection from "@/components/FAQSection";
 
 const Index = () => {
   const handleReserva = () => {
@@ -156,6 +157,9 @@ const Index = () => {
               </div>
             </CardContent>
           </Card>
+
+          <FAQSection />
+
         </div>
       </main>
 
