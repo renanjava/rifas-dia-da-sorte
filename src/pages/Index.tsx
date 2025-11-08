@@ -37,7 +37,7 @@ const Index = () => {
 
   const totalDisponivel = 200;
   const reservados = tableData.length;
-  const progresso = Math.min((reservados / totalDisponivel) * 100, 100);
+  const porcentagem = ((reservados / totalDisponivel) * 100).toFixed(0);
 
   const fetchExcel = async () => {
     try {
@@ -156,8 +156,8 @@ const Index = () => {
 
           <Card className="overflow-hidden border-2 mb-8 animate-fade-in shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-glow)] transition-all duration-500">
             <CardContent className="p-0">
-              <div className="grid md:grid-cols-2 gap-0">
-                <div className="relative w-full overflow-hidden bg-muted/30 rounded-lg">
+              <div className="grid md:grid-cols-2 gap-0 h-full">
+                <div className="relative w-full overflow-hidden bg-muted/30 rounded-lg md:h-full">
                   <img
                     src={product.image_url}
                     alt={`Prêmio - ${product.title}`}
@@ -165,8 +165,9 @@ const Index = () => {
                       w-full
                       h-auto
                       max-h-[260px]
-                      md:max-h-[420px]
                       object-contain
+                      md:h-full
+                      md:max-h-none
                       md:object-cover
                       transition-transform duration-700
                       hover:scale-105
@@ -225,21 +226,20 @@ const Index = () => {
                     >
                       Realizar Reserva
                     </Button>
+                    <div className="w-full">
+                      <div className="flex justify-between mb-2 text-sm text-muted-foreground">
+                        <span>Progresso da Rifa</span>
+                        <span>{porcentagem}%</span>
+                      </div>
+
+                      <div className="w-full h-6 rounded-full bg-muted overflow-hidden">
+                        <div
+                          className="h-full bg-green-500 transition-all duration-700"
+                          style={{ width: `${porcentagem}%` }}
+                        />
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className="w-full">
-                <div className="flex justify-between mb-2 text-sm text-muted-foreground">
-                  <span>Progresso da Rifa</span>
-                  <span>
-                    {reservados} / {totalDisponivel}
-                  </span>
-                </div>
-                <div className="w-full h-3 rounded-full bg-muted overflow-hidden">
-                  <div
-                    className="h-full bg-primary transition-all duration-700"
-                    style={{ width: `${progresso}%` }}
-                  />
                 </div>
               </div>
             </CardContent>
