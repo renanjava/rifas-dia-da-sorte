@@ -5,13 +5,12 @@ import { Badge } from "@/components/ui/badge";
 import {
   Instagram,
   Shield,
-  Calendar,
   Info,
   ListChecks,
   CreditCard,
   Sparkles,
 } from "lucide-react";
-import productHero from "@/assets/product-hero.jpg";
+import product from "@/assets/data/product.json";
 import FAQSection from "@/components/FAQSection";
 import { useState } from "react";
 import {
@@ -54,7 +53,7 @@ const Index = () => {
               Ação entre Amigos
             </Badge>
             <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
-              Smartphone Premium
+              {product.title}
             </h2>
             <p className="text-muted-foreground text-lg">
               Participe agora e concorra a este incrível prêmio!
@@ -66,7 +65,7 @@ const Index = () => {
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="relative aspect-video md:aspect-auto overflow-hidden bg-muted/30">
                   <img
-                    src={productHero}
+                    src={product.image_url}
                     alt="Produto da Rifa - Smartphone Premium"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
@@ -78,25 +77,29 @@ const Index = () => {
                 </div>
 
                 <div className="p-8 md:p-12 flex flex-col justify-center bg-card">
-                  <div className="space-y-6">
-                    <div>
-                      <h3 className="text-3xl md:text-4xl font-bold mb-2 text-card-foreground">
-                        Smartphone Premium
+                  <div className="space-y-8">
+                    <div className="space-y-2">
+                      <h3 className="text-4xl font-bold text-card-foreground leading-tight">
+                        {product.title}
                       </h3>
-                      <p className="text-muted-foreground">
-                        Último modelo, 256GB, câmera profissional
+                      <p className="text-muted-foreground text-base leading-relaxed">
+                        {product.description}
                       </p>
                     </div>
 
-                    <div className="space-y-3 py-4 border-y border-border">
-                      <div className="flex justify-between items-center">
-                        <span className="text-muted-foreground">
-                          Valor Unitário:
-                        </span>
-                        <span className="text-2xl font-bold text-primary">
-                          R$ 5,00
-                        </span>
-                      </div>
+                    <div className="p-4 rounded-lg border border-border bg-muted/10 flex items-center justify-between">
+                      <span className="text-sm text-muted-foreground">
+                        Valor Unitário
+                      </span>
+                      <span className="text-3xl font-bold text-primary tracking-tight">
+                        R$ {product.unit_price}
+                      </span>
+                    </div>
+
+                    <div>
+                      <span className="px-3 py-1 text-xs font-medium rounded-md bg-secondary/60 text-secondary-foreground tracking-wide">
+                        Data do sorteio: {product.result_date ?? "em breve..."}
+                      </span>
                     </div>
 
                     <Button
