@@ -38,8 +38,15 @@ const Index = () => {
             <Sparkles className="w-6 h-6 text-primary" />
           </div>
 
-          <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary/70 to-white/90 dark:to-zinc-200/90">
-            Dia Da Sorte
+          <h1
+            className="
+              text-2xl md:text-3xl font-extrabold tracking-tight
+              bg-clip-text text-transparent
+              bg-gradient-to-r from-primary via-primary/60 to-neutral-200
+              dark:from-primary dark:via-primary/70 dark:to-white/90
+            "
+          >
+            Dia da Sorte
           </h1>
         </div>
 
@@ -98,14 +105,24 @@ const Index = () => {
 
                     <div>
                       <span className="px-3 py-1 text-xs font-medium rounded-md bg-secondary/60 text-secondary-foreground tracking-wide">
-                        Data do sorteio: {product.result_date ?? "em breve..."}
+                        Data do sorteio: {product.result_date ?? "Em breve..."}
                       </span>
                     </div>
 
                     <Button
                       onClick={handleReserva}
                       size="lg"
-                      className="w-full text-lg font-bold bg-gradient-to-r from-primary to-primary-glow hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-[var(--shadow-glow)] animate-glow"
+                      className="
+                        w-full text-lg font-bold
+                        bg-gradient-to-r
+                        from-primary/80 to-primary/40
+                        dark:from-primary dark:to-primary-glow
+                        hover:opacity-90
+                        transition-all duration-300
+                        shadow-lg
+                        hover:shadow-[var(--shadow-glow)]
+                        animate-glow
+                      "
                     >
                       Realizar Reserva
                     </Button>
