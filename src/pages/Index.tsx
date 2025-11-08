@@ -60,7 +60,7 @@ const Index = () => {
               Ação entre Amigos
             </Badge>
             <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
-              {product.title}
+              Plataforma de realização de sorteios para conhecidos!
             </h2>
             <p className="text-muted-foreground text-lg">
               Participe agora e concorra a este incrível prêmio!
@@ -85,8 +85,11 @@ const Index = () => {
 
                 <div className="p-8 md:p-12 flex flex-col justify-center bg-card">
                   <div className="space-y-8">
-                    <div className="space-y-2">
-                      <h3 className="text-4xl font-bold text-card-foreground leading-tight">
+                    <div className="text-center mb-6">
+                      <span className="px-4 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-primary/10 text-primary">
+                        Sorteio
+                      </span>
+                      <h3 className="mt-2 text-4xl font-bold text-card-foreground leading-tight">
                         {product.title}
                       </h3>
                       <p className="text-muted-foreground text-base leading-relaxed">
