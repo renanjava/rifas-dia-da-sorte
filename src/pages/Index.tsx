@@ -60,7 +60,7 @@ const Index = () => {
               Ação entre Amigos
             </Badge>
             <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
-              Plataforma de realização de sorteios para conhecidos!
+              Sorteios entre amigos, simples e seguros
             </h2>
             <p className="text-muted-foreground text-lg">
               Participe agora e concorra a este incrível prêmio!
