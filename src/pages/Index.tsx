@@ -156,23 +156,6 @@ const Index = () => {
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
                   <div className="p-3 rounded-full bg-accent/10">
-                    <Calendar className="w-6 h-6 text-accent" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold mb-2 text-lg">Data do Sorteio</h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      A data será divulgada em breve através do nosso Instagram
-                      oficial. Fique atento!
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 hover:border-primary/50 transition-colors duration-300">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-full bg-accent/10">
                     <ListChecks className="w-6 h-6 text-accent" />
                   </div>
                   <div>
