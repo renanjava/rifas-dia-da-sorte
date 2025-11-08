@@ -154,12 +154,11 @@ const Index = () => {
                     Siga nosso Instagram
                   </h4>
                   <a
-                    href="https://instagram.com/rifas.dia_da_sorte"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-lg font-semibold text-primary hover:text-primary-glow transition-colors inline-flex items-center gap-2"
                   >
-                    @rifas.dia_da_sorte
+                    Em breve...
                   </a>
                   <p className="text-sm text-muted-foreground mt-2">
                     Acompanhe os sorteios, ganhadores e novidades!
@@ -181,8 +180,8 @@ const Index = () => {
                   </h4>
                   <div className="max-w-2xl mx-auto space-y-2">
                     <p className="text-lg font-semibold text-foreground">
-                      Ganhador = últimos 3 dígitos do 1º prêmio da Loteria
-                      Federal.
+                      O ganhador é definido pelos 3 últimos dígitos do 1º prêmio
+                      da Loteria Federal.
                     </p>
                     <p className="text-muted-foreground">
                       Se passar do último número da rifa, subtrai o total da
@@ -194,7 +193,7 @@ const Index = () => {
                     <DialogTrigger asChild>
                       <Button
                         variant="outline"
-                        className="mt-4 border-accent/50 hover:bg-accent/10"
+                        className="mt-4 border-2 border-accent text-accent hover:bg-accent hover:text-white dark:hover:text-black font-semibold transition-all"
                       >
                         Ver Exemplos
                       </Button>
