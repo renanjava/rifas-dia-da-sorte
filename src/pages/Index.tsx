@@ -35,7 +35,7 @@ const Index = () => {
     fetchExcel();
   }, []);
 
-  const totalDisponivel = 200;
+  const totalDisponivel = product.expected_reservations;
   const reservados = tableData.length;
   const porcentagem = Math.min(
     100,
@@ -77,7 +77,6 @@ const Index = () => {
         cellText: false,
         dense: false,
       });
-
 
       let allData: any[] = [];
 
@@ -486,9 +485,7 @@ const Index = () => {
           <DialogContent className="max-w-3xl h-[85vh] flex flex-col">
             <DialogHeader className="flex-shrink-0">
               <div className="flex items-center justify-between">
-                <DialogTitle>
-                  Números Reservados
-                </DialogTitle>
+                <DialogTitle>Números Reservados</DialogTitle>
               </div>
             </DialogHeader>
             {tableData.length === 0 ? (
