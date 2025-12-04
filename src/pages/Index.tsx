@@ -391,12 +391,12 @@ const Index = () => {
                         Ver Exemplos
                       </Button>
                     </DialogTrigger>
-                    <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+                    <DialogContent className="max-w-[95vw] sm:max-w-2xl max-h-[85vh] overflow-y-auto p-4 sm:p-6">
                       <DialogHeader>
-                        <DialogTitle className="text-2xl">
+                        <DialogTitle className="text-xl sm:text-2xl">
                           Como Funciona o Sorteio
                         </DialogTitle>
-                        <DialogDescription className="text-base pt-4">
+                        <DialogDescription className="text-sm sm:text-base pt-4">
                           <div className="space-y-4 text-left">
                             <p>
                               O sorteio desta ação é baseado nos{" "}
@@ -418,40 +418,40 @@ const Index = () => {
                               esse é o número ganhador.
                             </p>
 
-                            <div className="bg-muted/50 p-4 rounded-lg space-y-2">
-                              <p className="font-semibold">
+                            <div className="bg-muted/50 p-3 sm:p-4 rounded-lg space-y-2">
+                              <p className="font-semibold text-sm sm:text-base">
                                 Caso o resultado seja maior que o último número
                                 da rifa, aplicamos a seguinte regra de ajuste:
                               </p>
-                              <p className="pl-4">
+                              <p className="pl-3 sm:pl-4 text-sm sm:text-base">
                                 • Subtraímos o total de números da rifa até que
                                 o resultado fique dentro da faixa.
                               </p>
                             </div>
 
                             <div className="space-y-3 pt-2">
-                              <p className="font-semibold text-lg">
+                              <p className="font-semibold text-base sm:text-lg">
                                 Exemplos (rifa de 001 a 159):
                               </p>
 
-                              <div className="space-y-2 pl-4">
-                                <p className="font-mono bg-primary/5 p-3 rounded">
+                              <div className="space-y-2 pl-2 sm:pl-4">
+                                <p className="font-mono bg-primary/5 p-2 sm:p-3 rounded text-xs sm:text-sm break-words">
                                   • Resultado <strong>056</strong> → Ganhador:{" "}
                                   <strong className="text-primary">056</strong>
                                 </p>
 
-                                <p className="font-mono bg-primary/5 p-3 rounded">
+                                <p className="font-mono bg-primary/5 p-2 sm:p-3 rounded text-xs sm:text-sm break-words">
                                   • Resultado <strong>159</strong> → Ganhador:{" "}
                                   <strong className="text-primary">159</strong>
                                 </p>
 
-                                <p className="font-mono bg-accent/5 p-3 rounded">
+                                <p className="font-mono bg-accent/5 p-2 sm:p-3 rounded text-xs sm:text-sm break-words">
                                   • Resultado <strong>256</strong> → 256 - 159 =
                                   097 → Ganhador:{" "}
                                   <strong className="text-accent">097</strong>
                                 </p>
 
-                                <p className="font-mono bg-accent/5 p-3 rounded">
+                                <p className="font-mono bg-accent/5 p-2 sm:p-3 rounded text-xs sm:text-sm break-words">
                                   • Resultado <strong>356</strong> → 356 - 159 =
                                   197 → 197 - 159 = 038 → Ganhador:{" "}
                                   <strong className="text-accent">038</strong>
@@ -459,8 +459,8 @@ const Index = () => {
                               </div>
                             </div>
 
-                            <div className="bg-primary/5 p-4 rounded-lg mt-4">
-                              <p className="font-semibold">
+                            <div className="bg-primary/5 p-3 sm:p-4 rounded-lg mt-4">
+                              <p className="font-semibold text-sm sm:text-base">
                                 Essa regra garante que todos os números tenham a
                                 mesma chance de vencer, mantendo o sorteio
                                 transparente, verificável e sem interferência
