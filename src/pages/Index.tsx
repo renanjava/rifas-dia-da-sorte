@@ -169,71 +169,90 @@ const Index = () => {
 
           <Card className="overflow-hidden border-2 mb-8 animate-fade-in shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-glow)] transition-all duration-500">
             <CardContent className="p-0">
-              <div className="grid md:grid-cols-2 gap-0 h-full">
-                <div className="relative w-full overflow-hidden bg-muted/30 rounded-lg md:h-full">
+              <div className="flex flex-col lg:grid lg:grid-cols-5 gap-0">
+                <div className="relative w-full overflow-hidden bg-gradient-to-br from-muted/50 to-muted/20 lg:col-span-2 min-h-[320px] lg:min-h-[500px] flex items-center justify-center">
                   <img
                     src={product.image_url}
                     alt={`Prêmio - ${product.title}`}
                     className="
                       w-full
-                      h-auto
-                      max-h-[260px]
-                      object-contain
-                      md:h-full
-                      md:max-h-none
-                      md:object-cover
+                      h-full
+                      object-cover
                       transition-transform duration-700
                       hover:scale-105
                     "
                   />
                   <div className="absolute top-4 right-4">
-                    <Badge className="bg-accent text-accent-foreground font-bold text-sm px-3 py-1">
+                    <Badge className="bg-accent text-accent-foreground font-bold text-sm px-4 py-2 shadow-lg">
                       PRÊMIO
                     </Badge>
                   </div>
                 </div>
 
-                <div className="p-8 md:p-12 flex flex-col justify-center bg-card">
-                  <div className="space-y-8">
-                    <div className="text-center mb-6">
-                      <span className="px-4 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-primary/10 text-primary">
+                <div className="p-6 sm:p-8 lg:p-12 flex flex-col justify-between bg-card lg:col-span-3">
+                  <div className="space-y-6 lg:space-y-8">
+                    <div className="text-center lg:text-left">
+                      <span className="inline-block px-4 py-1.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-primary/10 text-primary">
                         Sorteio
                       </span>
-                      <h3 className="mt-2 text-4xl font-bold text-card-foreground leading-tight">
+                      <h3 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-card-foreground leading-tight">
                         {product.title}
                       </h3>
-                      <p className="text-muted-foreground text-base leading-relaxed">
+                      <p className="mt-3 text-muted-foreground text-sm sm:text-base leading-relaxed">
                         {product.description}
                       </p>
                     </div>
 
-                    <div className="p-4 rounded-lg border border-border bg-muted/10 flex items-center justify-between">
-                      <span className="text-sm text-muted-foreground">
+                    <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 lg:p-6 rounded-xl border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-transparent">
+                      <span className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
                         Valor Unitário
                       </span>
-                      <span className="text-3xl font-bold text-primary tracking-tight">
-                        R$ {product.unit_price}
-                      </span>
+                      <div className="flex flex-col items-center sm:items-end">
+                        <span className="text-4xl lg:text-5xl font-bold text-primary tracking-tight">
+                          R$ {product.unit_price}
+                        </span>
+                        <span className="text-xs text-muted-foreground mt-1">
+                          por número
+                        </span>
+                      </div>
                     </div>
-
-                    <Button
-                      onClick={handleReserva}
-                      size="lg"
-                      className="
-                        w-full text-lg font-bold
-                        bg-gradient-to-r
-                        from-primary/80 to-primary/40
-                        dark:from-primary dark:to-primary-glow
-                        hover:opacity-90
-                        transition-all duration-300
-                        shadow-lg
-                        hover:shadow-[var(--shadow-glow)]
-                        animate-glow
-                      "
-                    >
-                      Realizar Reserva
-                    </Button>
                   </div>
+
+                  <Button
+                    onClick={handleReserva}
+                    size="lg"
+                    className="
+                      w-full mt-6 lg:mt-8 text-base lg:text-lg font-bold
+                      py-6 lg:py-7
+                      bg-gradient-to-r
+                      from-primary via-primary/90 to-primary/70
+                      hover:from-primary/90 hover:via-primary hover:to-primary
+                      transition-all duration-300
+                      shadow-xl
+                      hover:shadow-2xl
+                      hover:scale-[1.02]
+                      active:scale-[0.98]
+                      animate-glow
+                    "
+                  >
+                    <span className="flex items-center justify-center gap-2">
+                      Realizar Reserva
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M5 12h14" />
+                        <path d="m12 5 7 7-7 7" />
+                      </svg>
+                    </span>
+                  </Button>
                 </div>
               </div>
             </CardContent>
