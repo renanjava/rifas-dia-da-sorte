@@ -487,25 +487,25 @@ const Index = () => {
         </div>
 
         <Dialog open={openTable} onOpenChange={setOpenTable}>
-          <DialogContent className="max-w-3xl h-[85vh] flex flex-col">
+          <DialogContent className="max-w-[95vw] sm:max-w-3xl h-[85vh] flex flex-col p-4 sm:p-6">
             <DialogHeader className="flex-shrink-0">
-              <div className="flex items-center justify-between">
-                <DialogTitle>Números Reservados</DialogTitle>
-              </div>
+              <DialogTitle className="text-lg sm:text-xl">
+                Números Reservados
+              </DialogTitle>
             </DialogHeader>
             {tableData.length === 0 ? (
               <div className="p-8 text-center text-muted-foreground">
                 Nenhum número reservado ainda
               </div>
             ) : (
-              <div className="flex-1 overflow-auto min-h-0">
+              <div className="flex-1 overflow-auto min-h-0 -mx-4 sm:mx-0">
                 <table className="w-full text-sm border-collapse">
                   <thead className="sticky top-0 bg-background z-10">
                     <tr className="bg-muted/50">
-                      <th className="border-b-2 border-border p-3 text-left font-semibold">
+                      <th className="border-b-2 border-border p-2 sm:p-3 text-left font-semibold text-xs sm:text-sm">
                         Número
                       </th>
-                      <th className="border-b-2 border-border p-3 text-left font-semibold">
+                      <th className="border-b-2 border-border p-2 sm:p-3 text-left font-semibold text-xs sm:text-sm">
                         Participante
                       </th>
                     </tr>
@@ -516,10 +516,10 @@ const Index = () => {
                         key={i}
                         className="hover:bg-muted/30 transition-colors"
                       >
-                        <td className="border-b border-border p-3">
+                        <td className="border-b border-border p-2 sm:p-3 text-xs sm:text-sm">
                           {row["Número"]}
                         </td>
-                        <td className="border-b border-border p-3">
+                        <td className="border-b border-border p-2 sm:p-3 text-xs sm:text-sm break-words">
                           {row["Participante"]}
                         </td>
                       </tr>
