@@ -233,27 +233,39 @@ const Index = () => {
                     >
                       Realizar Reserva
                     </Button>
-                    <div className="w-full pt-14">
-                      <div className="flex justify-between mb-2 text-sm text-muted-foreground">
-                        <span>Progresso da Rifa</span>
-                        <span>{porcentagem}%</span>
-                      </div>
-
-                      <div className="w-full h-6 rounded-full bg-muted overflow-hidden">
-                        <div
-                          className="h-full bg-green-500 transition-all duration-700"
-                          style={{ width: `${porcentagem}%` }}
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <span className="px-3 py-1 text-xs font-medium rounded-md bg-secondary/60 text-secondary-foreground tracking-wide">
-                        Data do sorteio: {product.result_date ?? "Em breve..."}
-                      </span>
-                    </div>
                   </div>
                 </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-2 mb-6 animate-fade-in">
+            <CardContent className="p-6">
+              <div className="w-full">
+                <div className="flex justify-between mb-2 text-sm text-muted-foreground">
+                  <span>Progresso da Rifa</span>
+                  <span>{porcentagem}%</span>
+                </div>
+
+                <div className="w-full h-6 rounded-full bg-muted overflow-hidden">
+                  <div
+                    className="h-full bg-green-500 transition-all duration-700"
+                    style={{ width: `${porcentagem}%` }}
+                  />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-2 mb-8 animate-fade-in">
+            <CardContent className="p-6">
+              <div className="flex items-center justify-center gap-3">
+                <span className="text-sm text-muted-foreground font-medium">
+                  Data do sorteio:
+                </span>
+                <span className="px-4 py-2 text-sm font-bold rounded-md bg-secondary text-secondary-foreground tracking-wide">
+                  {product.result_date ?? "Em breve..."}
+                </span>
               </div>
             </CardContent>
           </Card>
