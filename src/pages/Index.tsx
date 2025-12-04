@@ -312,38 +312,31 @@ const Index = () => {
 
             <Card className="border-2 hover:border-primary/50 transition-colors duration-300">
               <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-full bg-accent/10">
-                    <ListChecks className="w-6 h-6 text-accent" />
+                <div className="flex flex-col gap-4">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-full bg-accent/10 flex-shrink-0">
+                      <ListChecks className="w-6 h-6 text-accent" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold mb-2 text-lg">
+                        Visualize os números já reservados
+                      </h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Clique abaixo para verificar os números que já foram
+                        escolhidos:
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold mb-2 text-lg">
-                      Visualize os números já reservados
-                    </h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      Clique abaixo para verificar os números que já foram
-                      escolhidos:
-                    </p>
-                    <a
-                      onClick={() => {
-                        fetchExcel();
-                        setOpenTable(true);
-                      }}
-                      className="
-                        inline-flex items-center justify-center
-                        px-4 py-2 mt-6
-                        bg-primary text-primary-foreground
-                        rounded-md
-                        font-semibold
-                        shadow-sm
-                        transition-all
-                        hover:bg-primary/90 hover:shadow-md
-                        cursor-pointer
-                      "
-                    >
-                      Ver lista de números reservados
-                    </a>
-                  </div>
+                  <Button
+                    onClick={() => {
+                      fetchExcel();
+                      setOpenTable(true);
+                    }}
+                    className="w-full"
+                    size="default"
+                  >
+                    Ver números reservados
+                  </Button>
                 </div>
               </CardContent>
             </Card>
