@@ -3,7 +3,7 @@ import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 
 export const FAQSection = () => {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const faqs = [
     {
@@ -59,7 +59,7 @@ export const FAQSection = () => {
     },
   ];
 
-  const toggleFAQ = (index) => {
+  const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
@@ -99,7 +99,7 @@ export const FAQSection = () => {
                     : "max-h-0 opacity-0"
                 } overflow-hidden`}
               >
-                <div className="px-6 pb-6 text-muted-foreground leading-relaxed">
+                <div className="px-6 pb-6 text-muted-foreground leading-relaxed max-h-80 overflow-y-auto">
                   {faq.resposta}
                 </div>
               </div>
